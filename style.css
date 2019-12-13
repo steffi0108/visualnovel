@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', 'Ubuntu Mono', 'Fira Mono';
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b5e3f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0b7a9c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #006888;
+}
+
+/* Responsive Screen */
+@media only screen and (max-width: 800px) {
+
+    .title {
+        font-size: 2em;
+    }
+
+    .test-area {
+        width: 80vw;
+    }
+}
+
+/* BACKGROUND*/
+
+.container {
+    height: 100vh;
+    background-image: url('images/snoopy.gif'); //can change pictures here
+    background-size: cover;
+    /* background-position-y: 70%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    z-index: -1;
+}
+
+.title {
+    margin-top: 12vh;
+    font-size: 3em;
+}
+
+/* JAVASCRIPT TEST AREA */
+
+.test-area {
+    width: 70vw;
+    height: 60vh;
+    box-sizing: border-box;
+    padding: 2em;
+    background-color: rgb(255, 255, 255, 0.8);
+    margin: auto;
+    text-align: left;
+    color: rgb(2, 40, 90);
+    overflow: auto;
+}
+
+/* CALCULATORS */
+
+.calculator-container {
+    background-color: rgb(255, 255, 255, 0.8);
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.screen {
+    background-color: rgb(123, 178, 204);
+    padding: 16px;
+    font-size: 2em;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.calculatorButton {
+    margin-top: 16px;
+    background-color: rgb(37, 117, 155);
+    padding: 16px 0;
+    width: 110px;
+    text-align: center;
+}
+
+.numDisplay {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+    color: rgb(123, 178, 204);
+    font-size: 1.5em;
+}
+.invisible{
+  display:none;
+}
+
+.buttonStyle {
+  width: 150px;
+  height: 20px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+}
+.buttonStyle:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.buttonStyle:active {
+    color: #000
+}
+
+.buttonStyle:active:after {
+    background: transparent;
+}
+
+.buttonStyle:hover:before {
+    opacity: 1;
+}
+
+.buttonStyle:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.invisible{
+  display: none;
+}
+.button-container{
+  display:flex;
+  padding-bottom: 10px;
+  justify-content: center;
+
+}
+.story-window{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 21px;
+
+}
+
+.story-window img{
+  height: 200px;
+  padding-top: 18px;
+  display: block;
+  margin: auto;
+
+}
+
+/*
+.scary-bg{
+  background-image: url("images/scary-dino.jpg")
+}
+*/
